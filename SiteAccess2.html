@@ -1,0 +1,168 @@
+<div class="container mt-4">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Site Information for Accessibility</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            .section-header { 
+                background-color: #f8f9fa; 
+                padding: 10px;
+                margin: 10px 0;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .question-list {
+                display: none;
+                background-color: #fff;
+                padding: 15px;
+                border-left: 3px solid #0066cc;
+                margin: 10px 0;
+            }
+            .question-item {
+                margin-bottom: 10px;
+                padding: 5px;
+            }
+            .active {
+                display: block;
+            }
+            .main-heading {
+                font-weight: bold;
+                color: #0066cc;
+                border-bottom: 2px solid #0066cc;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+            }
+            .sub-section {
+                margin-left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container mt-4">
+            <h1 class="mb-4">Site Information for Accessibility</h1>
+    
+            <!-- Way Finding Section -->
+            <div class="main-heading">Way Finding (NBC 13.2.42)</div>
+            <div class="section-header" onclick="toggleQuestions('wayfinding')">
+                <h5>System Description</h5>
+            </div>
+            <div id="wayfinding" class="question-list">
+                <div class="question-item">• Information to assist navigation through built environment</div>
+            </div>
+    
+            <!-- Key Accessibility Issues -->
+            <div class="main-heading">Key Accessibility Issues</div>
+            
+            <div class="sub-section">
+                <div class="section-header" onclick="toggleQuestions('entrance')">
+                    <h5>Entrance Information</h5>
+                </div>
+                <div id="entrance" class="question-list">
+                    <div class="question-item">1. Is there a clear, visible International Symbol of Accessibility (ISA) at all accessible entrances?</div>
+                    <div class="question-item">2. Is tactile guidance provided from drop-off points to the main entrance?</div>
+                    <div class="question-item">3. Is the entrance free from any level differences greater than 150mm without proper warning?</div>
+                    <div class="question-item">4. Are all entrance signs mounted at a height between 900mm and 1800mm?</div>
+                    <div class="question-item">5. Is there sufficient lighting (minimum specified lux level) at the entrance area?</div>
+                    <div class="question-item">6. Is there a tactile layout map available at the entrance with 40% LRV contrast?</div>
+                </div>
+    
+                <div class="section-header" onclick="toggleQuestions('building')">
+                    <h5>Building Usage</h5>
+                </div>
+                <div id="building" class="question-list">
+                    <div class="question-item">1. Are all emergency evacuation routes clearly marked with both visual and tactile indicators?</div>
+                    <div class="question-item">2. Is there a clear accessible path from entrance to all main facilities?</div>
+                    <div class="question-item">3. Do all level changes have appropriate TGSI warnings and 70% color contrast?</div>
+                    <div class="question-item">4. Are guardrails installed where level differences exceed 300mm?</div>
+                    <div class="question-item">5. Are all corridors free from obstacles and meet minimum width requirements?</div>
+                    <div class="question-item">6. Is there sufficient turning space (1500mm) at decision points?</div>
+                </div>
+    
+                <div class="section-header" onclick="toggleQuestions('information')">
+                    <h5>Information Access</h5>
+                </div>
+                <div id="information" class="question-list">
+                    <div class="question-item">1. Is the reception/information desk clearly visible from the entrance?</div>
+                    <div class="question-item">2. Are information counters at accessible heights (750mm-800mm)?</div>
+                    <div class="question-item">3. Is there a building directory available at the main entrance?</div>
+                    <div class="question-item">4. Does the directory include a QR code for digital access?</div>
+                    <div class="question-item">5. Are all information signs in high contrast (70% minimum)?</div>
+                    <div class="question-item">6. Is braille information provided at all key decision points?</div>
+                </div>
+    
+                <div class="section-header" onclick="toggleQuestions('communication')">
+                    <h5>Communication Methods</h5>
+                </div>
+                <div id="communication" class="question-list">
+                    <div class="question-item">1. Are all important messages conveyed through at least two sensory means?</div>
+                    <div class="question-item">2. Is there an audio description service available?</div>
+                    <div class="question-item">3. Are visual alarms (strobe lights) installed for emergency communication?</div>
+                    <div class="question-item">4. Is there a permanently manned position for emergency communications?</div>
+                    <div class="question-item">5. Are all communication systems accessible from a wheelchair height?</div>
+                    <div class="question-item">6. Are signs updated regularly when locations/departments change?</div>
+                </div>
+            </div>
+    
+            <!-- Vision and Vision Zone -->
+            <div class="main-heading">Vision and Vision Zone (NBC B-1.3)</div>
+            <div class="sub-section">
+                <div class="section-header" onclick="toggleQuestions('signage-design')">
+                    <h5>Signage Design Assessment (NBC B-24.2)</h5>
+                </div>
+                <div id="signage-design" class="question-list">
+                    <div class="question-item">1. Are text and symbols a minimum of 15mm in height for key signage?</div>
+                    <div class="question-item">2. Is there a minimum luminance contrast of 70% between text/symbols and background?</div>
+                    <div class="question-item">3. Are pictograms accompanied by equivalent text description?</div>
+                    <div class="question-item">4. Are signs illuminated to at least 200 lux where required?</div>
+                    <div class="question-item">5. Is the International Symbol of Accessibility (ISA) used appropriately on accessible facilities?</div>
+                    <div class="question-item">6. Do directional signs include clear arrows and symbols?</div>
+                    <div class="question-item">7. Is text aligned left with first letter capitalized and rest in lower case?</div>
+                    <div class="question-item">8. Are signs free from glare and reflective surfaces?</div>
+                    <div class="question-item">9. Do tactile signs have raised letters/symbols of 1-1.5mm height?</div>
+                    <div class="question-item">10. Is braille provided where required with correct specifications?</div>
+                </div>
+        
+                <div class="section-header" onclick="toggleQuestions('panel-placement')">
+                    <h5>Panel Placement Assessment (NBC B-24.2.4)</h5>
+                </div>
+                <div id="panel-placement" class="question-list">
+                    <div class="question-item">1. Are wall-mounted signs placed between 900mm and 1800mm from floor level?</div>
+                    <div class="question-item">2. Are signs in crowded areas mounted at minimum 2100mm height?</div>
+                    <div class="question-item">3. Is tactile information placed between 1200-1600mm from floor level?</div>
+                    <div class="question-item">4. Are directional signs placed at decision points and intervals of max 30m?</div>
+                    <div class="question-item">5. Is clear floor space of 900mm × 1200mm provided in front of tactile signs?</div>
+                    <div class="question-item">6. Are overhead signs mounted minimum 2100mm from floor level?</div>
+                    <div class="question-item">7. Are signs placed consistently on the latch side of doors?</div>
+                    <div class="question-item">8. Is adequate lighting provided at all sign locations?</div>
+                    <div class="question-item">9. Are digital displays mounted at appropriate viewing heights?</div>
+                    <div class="question-item">10. Are signs placed to avoid creating obstacles in circulation paths?</div>
+                </div>
+            </div>
+            </div>
+    
+            <!-- TGSI Requirements -->
+            <div class="main-heading">TGSI Requirements</div>
+            <div class="sub-section">
+                <div class="section-header" onclick="toggleQuestions('tgsi')">
+                    <h5>Level Changes & Safety</h5>
+                </div>
+                <div id="tgsi" class="question-list">
+                    <div class="question-item">• No single steps allowed</div>
+                    <div class="question-item">• 70% visual contrast required</div>
+                    <div class="question-item">• Warning for edges >150mm</div>
+                    <div class="question-item">• Barriers required for drops >300mm</div>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            function toggleQuestions(id) {
+                const element = document.getElementById(id);
+                element.classList.toggle('active');
+            }
+        </script>
+    </body>
+    </html>
