@@ -27,62 +27,109 @@
         .active {
             display: block;
         }
+        .main-heading {
+            font-weight: bold;
+            color: #0066cc;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .sub-section {
+            margin-left: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container mt-4">
         <h1 class="mb-4">Site Information for Accessibility</h1>
 
-        <!-- Entrance Information Section -->
-        <div class="section-header" onclick="toggleQuestions('entrance')">
-            <h5>Entrance Information</h5>
+        <!-- Way Finding Section -->
+        <div class="main-heading">Way Finding (NBC 13.2.42)</div>
+        <div class="section-header" onclick="toggleQuestions('wayfinding')">
+            <h5>System Description</h5>
         </div>
-        <div id="entrance" class="question-list">
-            <div class="question-item">1. Is there a clear, visible International Symbol of Accessibility (ISA) at all accessible entrances?</div>
-            <div class="question-item">2. Is tactile guidance provided from drop-off points to the main entrance?</div>
-            <div class="question-item">3. Is the entrance free from any level differences greater than 150mm without proper warning?</div>
-            <div class="question-item">4. Are all entrance signs mounted at a height between 900mm and 1800mm?</div>
-            <div class="question-item">5. Is there sufficient lighting (minimum specified lux level) at the entrance area?</div>
-            <div class="question-item">6. Is there a tactile layout map available at the entrance with 40% LRV contrast?</div>
+        <div id="wayfinding" class="question-list">
+            <div class="question-item">• Information to assist navigation through built environment</div>
         </div>
 
-        <!-- Building Usage Section -->
-        <div class="section-header" onclick="toggleQuestions('building')">
-            <h5>Building Usage</h5>
-        </div>
-        <div id="building" class="question-list">
-            <div class="question-item">1. Are all emergency evacuation routes clearly marked with both visual and tactile indicators?</div>
-            <div class="question-item">2. Is there a clear accessible path from entrance to all main facilities?</div>
-            <div class="question-item">3. Do all level changes have appropriate TGSI warnings and 70% color contrast?</div>
-            <div class="question-item">4. Are guardrails installed where level differences exceed 300mm?</div>
-            <div class="question-item">5. Are all corridors free from obstacles and meet minimum width requirements?</div>
-            <div class="question-item">6. Is there sufficient turning space (1500mm) at decision points?</div>
+        <!-- Key Accessibility Issues -->
+        <div class="main-heading">Key Accessibility Issues</div>
+        
+        <div class="sub-section">
+            <div class="section-header" onclick="toggleQuestions('entrance')">
+                <h5>Entrance Information</h5>
+            </div>
+            <div id="entrance" class="question-list">
+                <div class="question-item">1. Is there a clear, visible International Symbol of Accessibility (ISA) at all accessible entrances?</div>
+                <div class="question-item">2. Is tactile guidance provided from drop-off points to the main entrance?</div>
+                <div class="question-item">3. Is the entrance free from any level differences greater than 150mm without proper warning?</div>
+                <div class="question-item">4. Are all entrance signs mounted at a height between 900mm and 1800mm?</div>
+                <div class="question-item">5. Is there sufficient lighting (minimum specified lux level) at the entrance area?</div>
+                <div class="question-item">6. Is there a tactile layout map available at the entrance with 40% LRV contrast?</div>
+            </div>
+
+            <div class="section-header" onclick="toggleQuestions('building')">
+                <h5>Building Usage</h5>
+            </div>
+            <div id="building" class="question-list">
+                <div class="question-item">1. Are all emergency evacuation routes clearly marked with both visual and tactile indicators?</div>
+                <div class="question-item">2. Is there a clear accessible path from entrance to all main facilities?</div>
+                <div class="question-item">3. Do all level changes have appropriate TGSI warnings and 70% color contrast?</div>
+                <div class="question-item">4. Are guardrails installed where level differences exceed 300mm?</div>
+                <div class="question-item">5. Are all corridors free from obstacles and meet minimum width requirements?</div>
+                <div class="question-item">6. Is there sufficient turning space (1500mm) at decision points?</div>
+            </div>
+
+            <div class="section-header" onclick="toggleQuestions('information')">
+                <h5>Information Access</h5>
+            </div>
+            <div id="information" class="question-list">
+                <div class="question-item">1. Is the reception/information desk clearly visible from the entrance?</div>
+                <div class="question-item">2. Are information counters at accessible heights (750mm-800mm)?</div>
+                <div class="question-item">3. Is there a building directory available at the main entrance?</div>
+                <div class="question-item">4. Does the directory include a QR code for digital access?</div>
+                <div class="question-item">5. Are all information signs in high contrast (70% minimum)?</div>
+                <div class="question-item">6. Is braille information provided at all key decision points?</div>
+            </div>
+
+            <div class="section-header" onclick="toggleQuestions('communication')">
+                <h5>Communication Methods</h5>
+            </div>
+            <div id="communication" class="question-list">
+                <div class="question-item">1. Are all important messages conveyed through at least two sensory means?</div>
+                <div class="question-item">2. Is there an audio description service available?</div>
+                <div class="question-item">3. Are visual alarms (strobe lights) installed for emergency communication?</div>
+                <div class="question-item">4. Is there a permanently manned position for emergency communications?</div>
+                <div class="question-item">5. Are all communication systems accessible from a wheelchair height?</div>
+                <div class="question-item">6. Are signs updated regularly when locations/departments change?</div>
+            </div>
         </div>
 
-        <!-- Information Access Section -->
-        <div class="section-header" onclick="toggleQuestions('information')">
-            <h5>Information Access</h5>
-        </div>
-        <div id="information" class="question-list">
-            <div class="question-item">1. Is the reception/information desk clearly visible from the entrance?</div>
-            <div class="question-item">2. Are information counters at accessible heights (750mm-800mm)?</div>
-            <div class="question-item">3. Is there a building directory available at the main entrance?</div>
-            <div class="question-item">4. Does the directory include a QR code for digital access?</div>
-            <div class="question-item">5. Are all information signs in high contrast (70% minimum)?</div>
-            <div class="question-item">6. Is braille information provided at all key decision points?</div>
+        <!-- Vision and Vision Zone -->
+        <div class="main-heading">Vision and Vision Zone (NBC B-1.3)</div>
+        <div class="sub-section">
+            <div class="section-header" onclick="toggleQuestions('vision')">
+                <h5>Signage Design & Panel Placement</h5>
+            </div>
+            <div id="vision" class="question-list">
+                <div class="question-item">• All signage designed based on vision field dimensions</div>
+                <div class="question-item">• Height: 900-1800mm</div>
+                <div class="question-item">• Minimum letter size: 15mm</div>
+            </div>
         </div>
 
-        <!-- Communication Methods Section -->
-        <div class="section-header" onclick="toggleQuestions('communication')">
-            <h5>Communication Methods</h5>
-        </div>
-        <div id="communication" class="question-list">
-            <div class="question-item">1. Are all important messages conveyed through at least two sensory means?</div>
-            <div class="question-item">2. Is there an audio description service available?</div>
-            <div class="question-item">3. Are visual alarms (strobe lights) installed for emergency communication?</div>
-            <div class="question-item">4. Is there a permanently manned position for emergency communications?</div>
-            <div class="question-item">5. Are all communication systems accessible from a wheelchair height?</div>
-            <div class="question-item">6. Are signs updated regularly when locations/departments change?</div>
+        <!-- TGSI Requirements -->
+        <div class="main-heading">TGSI Requirements</div>
+        <div class="sub-section">
+            <div class="section-header" onclick="toggleQuestions('tgsi')">
+                <h5>Level Changes & Safety</h5>
+            </div>
+            <div id="tgsi" class="question-list">
+                <div class="question-item">• No single steps allowed</div>
+                <div class="question-item">• 70% visual contrast required</div>
+                <div class="question-item">• Warning for edges >150mm</div>
+                <div class="question-item">• Barriers required for drops >300mm</div>
+            </div>
         </div>
     </div>
 
